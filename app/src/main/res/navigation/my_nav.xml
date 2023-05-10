@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/fragment_home2">
+    <fragment
+        android:id="@+id/fragment_home2"
+        android:name="com.example.prueba.fragment_home"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_fragment_home2_to_fragment_cart2"
+            app:destination="@id/fragment_cart2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_fragment_home2_to_buscar"
+            app:destination="@id/buscar"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_cart2"
+        android:name="com.example.prueba.fragment_cart"
+        android:label="Cart"
+        tools:layout="@layout/fragment_cart">
+        <action
+            android:id="@+id/action_fragment_cart2_to_fragment_home2"
+            app:destination="@id/fragment_home2" />
+    </fragment>
+    <fragment
+        android:id="@+id/buscar"
+        android:name="com.example.prueba.buscar"
+        android:label="Search"
+        tools:layout="@layout/fragment_buscar">
+        <action
+            android:id="@+id/action_buscar_to_fragment_home2"
+            app:destination="@id/fragment_home2" />
+    </fragment>
+</navigation>

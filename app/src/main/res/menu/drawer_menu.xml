@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_pescado"
+            android:icon="@drawable/ic_pescado"
+            android:title="Pescao"/>
+        <item android:id="@+id/nav_mail"
+            android:icon="@drawable/baseline_mail_outline_24"
+            android:title="Mail"/>
+        <item android:id="@+id/nav_perfil"
+            android:icon="@drawable/baseline_person_24"
+            android:title="Perfil"/>
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item android:id="@+id/nav_compartir"
+                android:icon="@drawable/baseline_share_24"
+                android:title="Compartir"/>
+            <item android:id="@+id/nav_Mandar"
+                android:icon="@drawable/baseline_send_24"
+                android:title="Mandar"/>
+        </menu>
+    </item>
+
+</menu>
