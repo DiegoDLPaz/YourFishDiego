@@ -10,6 +10,7 @@
     <color name="toolbar">#004987</color>
     <color name="fondo">#007AA2</color>
     <color name="botones">#009DCF</color>
+    <color name="itembackground">#faf0e6</color>
     <color name="bottom_nav_selected"></color>
     <color name="bottom_nav_unselected"></color>
 </resources>

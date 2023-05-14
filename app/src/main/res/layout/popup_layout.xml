@@ -33,10 +33,10 @@
                 android:id="@+id/ip"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
-                android:textColorHint="@color/fondo"
                 android:hint="IP"
-                />
+                android:inputType="text"
+                android:text="10.0.2.2"
+                android:textColorHint="@color/fondo" />
 
         </com.google.android.material.textfield.TextInputLayout>
 

@@ -15,7 +15,7 @@
             android:title="Perfil"/>
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Comunicate">
         <menu>
             <item android:id="@+id/nav_compartir"
                 android:icon="@drawable/baseline_share_24"
@@ -23,6 +23,14 @@
             <item android:id="@+id/nav_Mandar"
                 android:icon="@drawable/baseline_send_24"
                 android:title="Mandar"/>
+        </menu>
+    </item>
+
+    <item android:title="Salir">
+        <menu>
+            <item android:id="@+id/nav_LogOut"
+                android:icon="@drawable/baseline_logout_24"
+                android:title="Log Out"/>
         </menu>
     </item>
 

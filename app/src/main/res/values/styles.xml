@@ -9,4 +9,10 @@
         <item name="android:overScrollMode">never</item>
         <item name="android:scrollbarThumbVertical">@null</item>
     </style>
+
+    <style name="Button_Style">
+        <item name="android:backgroundTint"> @color/botones</item>
+        <item name="borderRound">20dp</item>
+        <item name="textFillColor">@color/black</item>
+    </style>
 </resources>

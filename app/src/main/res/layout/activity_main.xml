@@ -37,7 +37,39 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:background="@color/botones"
+            app:backgroundTint="@color/toolbar"
+            app:itemBackground="@color/toolbar"
+            app:itemIconTint="@color/bottom_nav_color"
+            app:itemTextColor="@color/bottom_nav_color"
             app:menu="@menu/bottom_nav_menu" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/floatingActionButton"
+            android:layout_alignBottom="@+id/floatingActionButton"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="-1dp"
+            android:clickable="true"
+            app:backgroundTint="@color/toolbar"
+            app:srcCompat="@drawable/baseline_refresh_24" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="120dp"
+            android:clickable="true"
+            app:backgroundTint="@color/toolbar"
+            app:srcCompat="@drawable/baseline_add_24" />
     </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
