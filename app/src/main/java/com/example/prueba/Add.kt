@@ -1,14 +1,11 @@
 package com.example.prueba
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
+import androidx.appcompat.app.AppCompatActivity
 import com.example.prueba.interfaces.PescadoAPI
 import com.google.android.material.textfield.TextInputEditText
 import kotlinx.coroutines.Dispatchers
@@ -27,7 +24,6 @@ class Add : AppCompatActivity() {
     lateinit var espinadoNo: RadioButton
     lateinit var insertar: Button
     var ip: String? = ""
-    private lateinit var sharedViewModel: SharedViewModel
 
     var espinado: Boolean = false
 
@@ -35,7 +31,8 @@ class Add : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add)
 
-        var intent = intent
+
+        val intent = intent
 
         ip = intent.getStringExtra("ip")
 
@@ -54,6 +51,7 @@ class Add : AppCompatActivity() {
         radioGroup = findViewById(R.id.radioGroup)
         insertar = findViewById(R.id.insertar)
 
+        espinadoSi.isChecked = true
 
         radioGroup.setOnCheckedChangeListener { group, checkedId ->
             val selectedRadioButton: RadioButton = findViewById(checkedId)
@@ -72,9 +70,9 @@ class Add : AppCompatActivity() {
 
         insertar.setOnClickListener {
 
-            var nombreJ: String = nombre.text.toString()
-            var tipo: String = tipo.text.toString()
-            var imageUrl: String = imageUrl.text.toString()
+            val nombreJ: String = nombre.text.toString()
+            val tipo: String = tipo.text.toString()
+            val imageUrl: String = imageUrl.text.toString()
 
             if (nombreJ == "" || tipo == "" || imageUrl == "") {
                 Toast.makeText(

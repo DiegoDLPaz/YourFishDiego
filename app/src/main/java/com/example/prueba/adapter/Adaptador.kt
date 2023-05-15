@@ -4,7 +4,6 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewParent
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -48,12 +47,9 @@ class Adaptador(var listaPescados: ArrayList<Pescado>,context: Context?) :
     }
 
     override fun onBindViewHolder(holder: layout_pescado, position: Int) {
-        var pescadoActual = listaPescados[position]
+        val pescadoActual = listaPescados[position]
 
-        var nombre = pescadoActual.nombre
-        var tipo = pescadoActual.tipo
-        var espinado = pescadoActual.espinado
-        var imageUrl = pescadoActual.imageUrl
+        val imageUrl = pescadoActual.imageUrl
 
         holder.nombre.text = pescadoActual.nombre
         if (pescadoActual.espinado == true){

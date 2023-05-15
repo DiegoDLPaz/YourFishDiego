@@ -1,13 +1,8 @@
 package com.example.prueba
 
-import android.bluetooth.le.AdvertiseSettings
 import android.content.Intent
 import android.graphics.Paint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Spannable
-import android.text.SpannableString
-import android.text.style.UnderlineSpan
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -15,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
 
 class Login : AppCompatActivity() {
@@ -82,13 +78,16 @@ class Login : AppCompatActivity() {
         builder.setView(dialogView).setPositiveButton("Confirmar") { dialog, which ->
             val inputText = editText.text.toString().trim()
             if (inputText.isEmpty()) {
-                Toast.makeText(applicationContext, "Please enter an IP address", Toast.LENGTH_SHORT)
+                Toast.makeText(applicationContext, "Por favor inserte una dirección ip", Toast.LENGTH_SHORT)
                     .show()
             } else {
                 ip = inputText
                 dialog.dismiss()
             }
         }.setNegativeButton("Cancelar") { dialog, which ->
+            dialog.dismiss()
+        }.setNeutralButton("Ip por defecto"){ dialog , wich ->
+            ip = "10.0.2.2"
             dialog.dismiss()
         }
         builder.create().show()

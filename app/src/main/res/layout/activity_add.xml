@@ -16,7 +16,7 @@
         app:boxStrokeErrorColor="@color/design_default_color_error"
         app:counterEnabled="true"
         app:counterMaxLength="255"
-        app:hintTextColor="@color/fondo"
+        app:hintTextColor="@color/toolbar"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
@@ -25,7 +25,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Inserta la url de la imagen del pez"
-
             android:inputType="text"
             android:textColorHint="@color/toolbar" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -68,7 +67,7 @@
         app:boxStrokeErrorColor="@color/design_default_color_error"
         app:counterEnabled="true"
         app:counterMaxLength="20"
-        app:hintTextColor="@color/fondo"
+        app:hintTextColor="@color/toolbar"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
@@ -99,7 +98,7 @@
         app:boxStrokeErrorColor="@color/design_default_color_error"
         app:counterEnabled="true"
         app:counterMaxLength="20"
-        app:hintTextColor="@color/fondo"
+        app:hintTextColor="@color/toolbar"
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
@@ -126,7 +125,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="35dp"
-            android:text="Espinado" />
+            android:text="Espinado"
+            android:outlineSpotShadowColor="@color/botones"
+            android:shadowColor="@color/botones"
+            android:outlineAmbientShadowColor="@color/botones"
+            />
 
         <RadioButton
             android:id="@+id/noEspinado"
@@ -134,7 +137,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="35dp"
-            android:text="No espinado" />
+            android:text="No espinado"
+            android:outlineSpotShadowColor="@color/botones"
+            android:shadowColor="@color/botones"
+            android:outlineAmbientShadowColor="@color/botones"
+            />
     </RadioGroup>
 
     <Button
