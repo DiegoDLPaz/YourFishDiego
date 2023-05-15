@@ -41,10 +41,12 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //Tomamos el modelo compartido
         sharedViewModel = ViewModelProvider(this).get(SharedViewModel::class.java)
 
         val intent = intent
 
+        //Tomamos el ip del Login y Comprobamos si es admin
         if (intent.getStringExtra("ip") != null) {
             ip = intent.getStringExtra("ip")
             isAdmin = intent.getBooleanExtra("admin",false)
@@ -52,18 +54,19 @@ class MainActivity : AppCompatActivity() {
             sharedViewModel.setIp(ip)
         }
 
+        //Inicializamos el manejador de fragmentos
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
+        //Inicializamos las variables
         drawer = binding.drawerLayout
         toolbar = binding.materialToolbar
         bottom_nav = binding.bottomNavigationView
         boton_anyadir = binding.floatingActionButton
         boton_refresh = binding.refresh
 
-
-
+        //Escondemos los botones si no es admin
         if (!isAdmin){
             boton_anyadir.isVisible = false
             boton_refresh.isVisible = false
@@ -79,8 +82,10 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         bottom_nav.setupWithNavController(navController)
 
+        //Bindeamos el Listener de la navegación
         binding.navView.setNavigationItemSelectedListener(onNavigationItemSelectedListener)
 
+        //Viajamos a la pantalla de añadir
         boton_anyadir.setOnClickListener {
             var miIntent = Intent(this,Add::class.java)
             miIntent.putExtra("ip",ip)
@@ -119,6 +124,7 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
+    //Usamos la función del fragmento home para actualizar los datos
     private fun actualizarDatos() {
         val fragmentoHome = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as? NavHostFragment
         val fragmentHome = fragmentoHome?.childFragmentManager?.primaryNavigationFragment as? fragment_home
